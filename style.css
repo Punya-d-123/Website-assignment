@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 20px 0;
+    position: fixed; /* Fixed positioning on top of page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure above content */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.cta-button {
+    background-color: #c0392b;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(https://preview.colorlib.com/theme/redplanet/images/hero_5.jpg.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of  viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding-top: 80px; /*navbar does not overlap text */
+    position: relative;
+}
+
+
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: 900;
+    margin: 0;
+    z-index: 200;
+    font-family: "Playfair Display", serif;
+    align-items: center;
+    text-align: center;
+}
+
+/* Position the booking box */
+.containers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 70px; /* Add more bottom padding for spacing */
+}
+
+.booking-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    position: absolute;
+    bottom: -50px; /* Place the bookingbelow image */
+    left: 50%;
+    transform: translateX(-50%); /* Center booking box */
+    z-index: 500;
+}
+
+/* Ensure each form group takes up equal space */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(25% - 15px);
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking-box button {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.booking-box button:hover {
+    background-color: #218838;
+}
+
+/* Info Section Styles */
+.info-section {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 200px;
+    padding-bottom: 40px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.info-left {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.info-left h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+}
+
+.info-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 80%;
+    color: grey;
+}
+
+.watch-video-button {
+    padding: 16px 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.watch-video-button:hover {
+    background-color: #2980b9;
+}
+
+.info-right {
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-right img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Grid Section */
+.image-grid-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.image-grid-section h1{
+font-weight: bold;
+color: black;
+text-align: center;
+font-size: 60px;
+font-family: "Playfair Display", serif;
+padding-top: 150px;
+padding-bottom: 150px;
+}
+
+.image-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  width: 100%;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.flip-card-back {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.Text h1{
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 40px;
+}
+.Text p{
+  font-size: 18px;
+  text-align: center;
+  color: grey;
+  padding-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 100px;
+}
+.image-grids {
+  display: flex;
+  gap: 20px; /* Space between images */
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-items {
+  text-align: center;
+}
+
+.grid-items img {
+  width: 385px;  /* Adjust size as needed */
+  height: 300px;
+  object-fit: cover;
+  /* Optional: Adds rounded corners */
+  
+}
+
+.grid-items p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 100px;
+}
+
+
+/* Restaurant Menu Section */
+.menu-section {
+  height: 800px;
+  background: url('https://preview.colorlib.com/theme/redplanet/images/hero_3.jpg.webp') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.menu-content {
+  color: #fff;
+  padding: 20px;
+  width: 60%;
+  text-align: center;
+  
+}
+
+.menu-content h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  padding-top:20px;
+}
+
+.menu-content p {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar */
+.menu-nav {
+  margin-top: 20px;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.menu-nav a.active {
+  background-color: #c0392b;
+}
+
+/* Food Menu Layout */
+.food-menu {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.food-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.food-item {
+  
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+.food-item h3{
+  color: red;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+.food-item h4{
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+.food-item p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.people-say {
+  width: 100%;
+  height: 700px; /* Adjust to match the food menu section */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ padding-top: 80px;
+}
+
+
+.people-say h2 {
+  font-size: 60px;
+  
+  font-family:"Playfair Display", serif ;
+}
+
+
+.testimonial-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+
+.testimonial-wrapper {
+  display: flex;
+  width: 200%; /* Two slides */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.testimonial-slide {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+
+.testimonial {
+  width: 30%;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.testimonial img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+
+
+.testimonial span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+#slide1:checked ~ .testimonial-wrapper {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .testimonial-wrapper {
+  transform: translateX(-50%);
+}
+
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 25px;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+.event-section {
+  width: 100%;
+  text-align: center;
+  margin-top: -70px;
+  background: lightgray;
+  padding-bottom: 40px;
+}
+
+
+.event-section h2 {
+  font-size: 60px;
+  width: 634.98px;
+  height: 72px;
+  margin: 0px 0px 8px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Playfair Display", serif;
+}
+
+
+.event-description {
+  width: 634.98px;
+  height: 86.39px;
+  margin: 0px 0px 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: grey;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top:50px;
+}
+
+
+.event-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+  box-shadow: #888;
+  
+  
+}
+
+.event-box {
+  width: 349.98px;
+  height: 558.55px;
+  text-align: center;
+  background: white;
+}
+
+
+.event-box img {
+  width: 349.98px;
+  height: 249.8px;
+  object-fit: cover;
+}
+
+
+.event-date {
+  display: block;
+  width: 181.72px;
+  height: 14px;
+  margin: 10px auto;
+  font-size: 14px;
+  color: #888;
+}
+
+
+.event-title {
+  width: 287.2px;
+  height: 60.19px;
+  margin: 10px auto;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+
+.event-text {
+  width: 289.98px;
+  height: 115.19px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: grey;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 50px;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+
+.contact-header {
+  font-size: 60px;
+  width: 634.98px;
+  height: 72px;
+  margin: 0px 0px 8px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Playfair Display", serif;
+}
+
+
+.contact-description {
+  width: 634.98px;
+  height: 86.39px;
+  margin: 0px 0px 16px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 40px;
+}
+
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+
+.send-message-box {
+  width: 650px; 
+  padding: 40px; 
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  padding-top: 30px;
+  margin-left: -100px;
+  margin-top: 50px;
+}
+
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+.input-box {
+  height: 55px; 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 49%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+
+
+.email-box {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+.message-box {
+  width: 100%;
+  height: 230px; 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+
+.submit-btn {
+  width: 200px; 
+  height: 50px;
+  background: #ff6600;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #e65c00;
+}
+
+
+.contact-info {
+  width: 365.83px;
+  text-align: left;
+  padding-top: 50px;
+ 
+}
+
+
+.info-header {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: -200px;
+}
+
+/* Info Text */
+.info-text {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+.reserve-section {
+  width: 100vw;
+  height: 30vh;
+  background: url('https://preview.colorlib.com/theme/redplanet/images/img_2.jpg.webp') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+  color: white;
+  font-size: 3vw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* 🔹 Text on Left */
+.reserve-text {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+}
+
+
+.reserve-btn {
+  padding: 20px 40px;
+  background: #ff6600;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reserve-btn:hover {
+  background: #e65c00;
+}
+
+
+.footer {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  text-align: left;
+  width: 80%;
+}
+
+
+.footer-row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+
+.footer-row a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.footer-row a:hover {
+  text-decoration: underline;
+}
+
+
+.contact-info-footer {
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-info-footer span {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.newsletter {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.newsletter h3 {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.newsletter input {
+  width: 50%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .footer-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .reserve-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .reserve-text {
+      font-size: 5vw;
+      margin-bottom: 20px;
+  }
+
+  .reserve-btn {
+      font-size: 4vw;
+      padding: 15px 30px;
+  }
+
+  .newsletter input {
+      width: 80%;
+      height: 40px;
+      font-size: 1.5vw;
+  }
+}
